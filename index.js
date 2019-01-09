@@ -9,7 +9,7 @@ const csvToJson = (inputFilePath = 'customer-data.csv', outputFilePath = 'custom
             console.log(error)
         })
         .then((customerJson) => {
-            fs.writeFileSync(path.join(__dirname, outputFilePath), JSON.stringify(customerJson));
+            fs.writeFileSync(path.join(__dirname, outputFilePath), JSON.stringify(customerJson, null, "\t"));
         })
 }
 
